@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+    border-radius: 8px;
+    
+    width: 100%;
+  
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  th {
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  /* Estilos para las celdas del cuerpo */
+  td {
+    padding: 15px;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  /* Espacio entre columnas */
+  th:not(:last-child),
+  td:not(:last-child) {
+    padding-right: 25px;
+  }
+  
+  /* Estilos para el botón */
+  .button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para la columna de acciones */
+  .actions {
+    text-align: center;
+    width: 100px;
+  }
+  
+  /* Estilos para filas alternas */
+  tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  /* Efecto hover en las filas */
+  tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para el contenedor del botón "Agregar Cliente" */
+  .button[name="button"] {
+    margin: 20px 0;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+  }
+  
+  input, select, textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  }
+  
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  /* Estilos generales para los botones */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff; /* Color de fondo principal */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el contenedor de botones si necesitas agrupar varios */
+  .button-container {
+    margin: 10px 0; /* Espaciado entre los botones */
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  /* Estilos al pasar el cursor sobre el botón */
+  .button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo en hover */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño en hover */
+  }
+  
+  /* Estilos para botones específicos si necesitas variantes */
+  .button.agregar {
+    background-color: #28a745; /* Verde para "Agregar Libro" */
+  }
+  
+  .button.agregar:hover {
+    background-color: #218838; /* Verde oscuro en hover */
+  }
+  
+  .button.editar {
+    background-color: #ffc107; /* Amarillo para "Editar" */
+  }
+  
+  .button.editar:hover {
+    background-color: #e0a800; /* Amarillo oscuro en hover */
+  }
+  
+  .button.eliminar {
+    background-color: #dc3545; /* Rojo para "Eliminar" */
+  }
+  
+  .button.eliminar:hover {
+    background-color: #c82333; /* Rojo oscuro en hover */
+  }
+  
+  /* Estilo para alinear acciones dentro de una celda de tabla */
+  .actions a {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  
+  button:hover {
+    background-color: #357abd;
+  }
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Error states */
+  .error input, .error select, .error textarea {
+    border-color: #dc3545;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+  /* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    input, select, textarea, button {
+        padding: 0.7rem;
+    }
+  }
